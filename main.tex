@@ -9,7 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FONT, MARGINI E SPAZIATURE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[sc]{mathpazo} 		% Usa il font Palatino
+% \usepackage[sc]{mathpazo} 		% Usa il font Palatino
 \usepackage[utf8]{inputenc} 	% UTF8 per avere tutti gli accentacci
 
 \usepackage{setspace}			% Imposta l'interlinea
@@ -38,16 +38,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PERSONALIZZAZIONE DEGLI ELEMENTI DEL CAPITOLO: TITOLO, SEZIONE, ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[Bjornstrup]{fncychap} % Anche: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+% \usepackage[Bjornstrup]{fncychap} % Anche: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 
 % Variazioni al numero del capitolo
-\ChNumVar{\fontsize{76}{80}\usefont{OT1}{pzc}{m}{n}\selectfont\color{black}}  
+% \ChNumVar{\fontsize{76}{80}\usefont{OT1}{pzc}{m}{n}\selectfont\color{black}}  
 
 % Variazioni al nome del capitolo
-\ChTitleVar{\raggedleft\LARGE\bfseries}
+% \ChTitleVar{\raggedleft\LARGE\bfseries}
 
 % Citazione all'inizio del capitolo
 \usepackage{epigraph}
+
+% Numero capitolo
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ABSTRACT
@@ -164,8 +168,8 @@
 	\end{titlepage}	
 	
 	
-	\include{matters/frontmatter/Dedication}
-	\include{matters/frontmatter/Abstract}
+	% \include{matters/frontmatter/Dedication}
+	% \include{matters/frontmatter/Abstract}
 
 		
 	\cleardoublepage
@@ -174,19 +178,19 @@
 	\pdfbookmark{\contentsname}{tableofcontents}
 	\tableofcontents
 	
-	\include{matters/frontmatter/Glossary}
+	% \include{matters/frontmatter/Glossary}
 	
-	% Lista delle figure
-	\cleardoublepage
-	\phantomsection
-	\addcontentsline{toc}{chapter}{List of Figures}
-	\listoffigures
+	% % Lista delle figure
+	% \cleardoublepage
+	% \phantomsection
+	% \addcontentsline{toc}{chapter}{List of Figures}
+	% \listoffigures
 	
-	% Lista delle tabelle
-	\cleardoublepage
-	\phantomsection
-	\addcontentsline{toc}{chapter}{List of Tables}
-	\listoftables
+	% % Lista delle tabelle
+	% \cleardoublepage
+	% \phantomsection
+	% \addcontentsline{toc}{chapter}{List of Tables}
+	% \listoftables
 	
 	% Introduzione
 	\include{matters/frontmatter/Introduction}
@@ -198,9 +202,9 @@
 	\include{matters/mainmatter/Chapter_1}
 	\include{matters/mainmatter/Chapter_2}
 	
-	\begin{appendices}
-		\include{matters/mainmatter/Appendix_A}
-	\end{appendices}
+	% \begin{appendices}
+	% 	\include{matters/mainmatter/Appendix_A}
+	% \end{appendices}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% BACKMATTER 
@@ -208,10 +212,10 @@
 	\backmatter
 	
 	% Bibliografia
-	\phantomsection
-	\addcontentsline{toc}{chapter}{Bibliography} 
-	\bibliography{Bibliography}  % percorso relativo per il file .bib 
-	\bibliographystyle{unsrt} 	 % altri stili qui: https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+	% \phantomsection
+	% \addcontentsline{toc}{chapter}{Bibliography} 
+	% \bibliography{Bibliography}  % percorso relativo per il file .bib 
+	% \bibliographystyle{unsrt} 	 % altri stili qui: https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
 	
-	\include{matters/backmatter/Ringraziamenti}
+	% \include{matters/backmatter/Ringraziamenti}
 \end{document}
